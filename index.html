@@ -58,6 +58,7 @@
 </style>
 </head>
 <body>
+<audio id="bgMusic" src="freesound_community-tam-xa-mai-56766.mp3" loop></audio>
 <canvas id="gameCanvas"></canvas>
 <div id="controls">
   <div class="btn" id="btnUp">▲</div>
@@ -66,6 +67,17 @@
   <div class="btn" id="btnRight">▶</div>
 </div>
 <script>
+const bgMusic = document.getElementById('bgMusic');
+bgMusic.volume = 0.5; // optional, set volume to 50%
+
+window.addEventListener('load', () => {
+    bgMusic.play().catch(() => {
+        // Fallback: play on first click/tap
+        document.body.addEventListener('click', () => bgMusic.play(), { once: true });
+        document.body.addEventListener('touchstart', () => bgMusic.play(), { once: true });
+    });
+  });
+
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
