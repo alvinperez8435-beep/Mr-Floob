@@ -367,7 +367,7 @@ function draw() {
     ctx.fillStyle = '#50e878';
     ctx.font = `${isMobile ? 13 : 18}px 'Press Start 2P'`;
     ctx.textAlign = 'center';
-    ctx.fillText('DINO RUNNER', CW/2, CH/2 - 30);
+    ctx.fillText('Mr Floob', CW/2, CH/2 - 30);
     ctx.font = `${isMobile ? 7 : 9}px 'Press Start 2P'`;
     ctx.fillStyle = '#aaffaa';
     ctx.fillText('TAP  ▲  TO  START', CW/2, CH/2 + 4);
